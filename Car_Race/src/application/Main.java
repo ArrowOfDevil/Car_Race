@@ -1,4 +1,6 @@
 package application; 
+
+
 import javafx.animation.AnimationTimer; 
 import javafx.application.Application; 
 import javafx.stage.Stage; 
@@ -27,17 +29,17 @@ import javafx.scene.image.Image;
 			Scene theScene = new Scene( root ); 
 			theStage.setScene( theScene ); 
 
-			Canvas canvas = new Canvas( 500, 600 ); 
+			Canvas canvas = new Canvas( 600, 500 ); 
 			root.getChildren().add( canvas ); 
 
 			GraphicsContext gc = canvas.getGraphicsContext2D(); 
 
-			Image car = new Image( "car.jpg" ); 
+			Image car = new Image("Car.jpg"); 
 
 			AnimatedImage road = new AnimatedImage(); 
-			Image[] imageArray = new Image[18]; 
+			Image[] imageArray = new Image[5]; 
 			for(int i=1;i<5;i++) { 
-				imageArray[i] = new Image("road"+i+".png"); 
+				imageArray[i] = new Image("road0"+i+".png"); 
 			} 
 			road.frames = imageArray; 
 			road.duration = 1; 
